@@ -66,4 +66,26 @@ mod tests {
         tests.run_test(vec![1, 5, 4, 5], 16);
         tests.run_test(vec![3, 7], 12);
     }
+
+    #[test]
+    fn test_shortest_supersequence_lcci_17_18() {
+        let tests = TestCase::new(|p: (Vec<i32>, Vec<i32>)|
+            solutions::shortest_supersequence_lcci_17_18::shortest_seq(p.0, p.1)
+        );
+
+        tests.run_test((vec![7, 5, 9, 0, 2, 1, 3, 5, 7, 9, 1, 1, 5, 8, 8, 9, 7], vec![1, 5, 9]), vec![7, 10]);
+        tests.run_test((vec![1, 2, 3], vec![4]), vec![]);
+        tests.run_test((vec![], vec![4]), vec![]);
+    }
+
+    #[test]
+    fn test_shuffle_the_array_1470() {
+        let tests = TestCase::new(|p: (Vec<i32>, i32)|
+            solutions::shuffle_the_array_1470::shuffle(p.0, p.1)
+        );
+
+        tests.run_test((vec![2, 5, 1, 3, 4, 7], 3), vec![2, 3, 5, 4, 1, 7]);
+        tests.run_test((vec![1, 2, 3, 4, 4, 3, 2, 1], 4), vec![1, 4, 2, 3, 3, 2, 4, 1]);
+        tests.run_test((vec![1, 1, 2, 2], 2), vec![1, 2, 1, 2]);
+    }
 }
