@@ -88,4 +88,14 @@ mod tests {
         tests.run_test((vec![1, 2, 3, 4, 4, 3, 2, 1], 4), vec![1, 4, 2, 3, 3, 2, 4, 1]);
         tests.run_test((vec![1, 1, 2, 2], 2), vec![1, 2, 1, 2]);
     }
+
+    #[test]
+    fn test_validate_stack_sequences_946() {
+        let tests = TestCase::new(|p: (Vec<i32>, Vec<i32>)|
+            solutions::validate_stack_sequences_946::validate_stack_sequences(p.0, p.1)
+        );
+
+        tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 2, 1]), true);
+        tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 1, 2]), false);
+    }
 }
