@@ -98,4 +98,15 @@ mod tests {
         tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 2, 1]), true);
         tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 1, 2]), false);
     }
+
+    #[test]
+    fn test_final_prices_with_a_special_discount_in_a_shop_1475() {
+        let tests = TestCase::new(
+            solutions::final_prices_with_a_special_discount_in_a_shop_1475::final_prices
+        );
+
+        tests.run_test(vec![8, 4, 6, 2, 3], vec![4, 2, 4, 2, 3]);
+        tests.run_test(vec![1, 2, 3, 4, 5], vec![1, 2, 3, 4, 5]);
+        tests.run_test(vec![10, 1, 1, 6], vec![9, 0, 1, 6]);
+    }
 }
