@@ -10,9 +10,9 @@ pub fn can_be_equal(target: Vec<i32>, arr: Vec<i32>) -> bool {
 
     for i in 0..target.len() {
         if target[i] != arr[i] {
-            return false
+            return false;
         }
     }
 
-    return true
+    true
 }
