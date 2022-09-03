@@ -109,4 +109,13 @@ mod tests {
         tests.run_test(vec![1, 2, 3, 4, 5], vec![1, 2, 3, 4, 5]);
         tests.run_test(vec![10, 1, 1, 6], vec![9, 0, 1, 6]);
     }
+
+    #[test]
+    fn test_maximum_length_of_pair_chain_646() {
+        let tests = TestCase::new(
+            solutions::maximum_length_of_pair_chain_646::find_longest_chain
+        );
+
+        tests.run_test(vec![vec![1, 2], vec![2, 3], vec![3, 4]], 2);
+    }
 }

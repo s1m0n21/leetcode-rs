@@ -4,3 +4,4 @@ pub mod shortest_supersequence_lcci_17_18;
 pub mod shuffle_the_array_1470;
 pub mod validate_stack_sequences_946;
 pub mod final_prices_with_a_special_discount_in_a_shop_1475;
+pub mod maximum_length_of_pair_chain_646;
