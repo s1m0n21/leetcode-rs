@@ -118,4 +118,16 @@ mod tests {
 
         tests.run_test(vec![vec![1, 2], vec![2, 3], vec![3, 4]], 2);
     }
+
+    #[test]
+    fn test_special_positions_in_a_binary_matrix_1582() {
+        let tests = TestCase::new(
+            solutions::special_positions_in_a_binary_matrix_1582::num_special
+        );
+
+        tests.run_test(vec![vec![1, 0, 0], vec![0, 0, 1], vec![1, 0, 0]], 1);
+        tests.run_test(vec![vec![1, 0, 0], vec![0, 1, 0], vec![0, 0, 1]], 3);
+        tests.run_test(vec![vec![0, 0, 0, 1], vec![1, 0, 0, 0], vec![0, 1, 1, 0], vec![0, 0, 0, 0]], 2);
+        tests.run_test(vec![vec![0, 0, 0, 0, 0], vec![1, 0, 0, 0, 0], vec![0, 1, 0, 0, 0], vec![0, 0, 1, 0, 0], vec![0, 0, 0, 1, 1]], 3);
+    }
 }
