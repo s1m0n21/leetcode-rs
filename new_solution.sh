@@ -28,4 +28,5 @@ printf "// PROBLEM: https://leetcode.cn/problems/%s\n" "$RAW_PROBLEM_NAME" >> "s
 printf "// DATE:    %s\n\n\n\n" "$(date "+%Y/%m/%d %H:%M:%S %z")" >> "src/solutions/$FILENAME.rs"
 printf "#[cfg(test)]\n" >> "src/solutions/$FILENAME.rs"
 printf "use crate::utils::test::TestCase;\n\n" >> "src/solutions/$FILENAME.rs"
+printf "#[test]\n" >> "src/solutions/$FILENAME.rs"
 printf "fn test_solution() {}" >> "src/solutions/$FILENAME.rs"
