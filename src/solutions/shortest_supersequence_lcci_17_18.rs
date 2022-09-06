@@ -52,3 +52,15 @@ pub fn shortest_seq(big: Vec<i32>, small: Vec<i32>) -> Vec<i32> {
 
     ans
 }
+
+#[cfg(test)]
+use crate::utils::test::TestCase;
+
+#[test]
+fn test_solution() {
+    let tests = TestCase::new(|p: (Vec<i32>, Vec<i32>)| shortest_seq(p.0, p.1));
+
+    tests.run_test((vec![7, 5, 9, 0, 2, 1, 3, 5, 7, 9, 1, 1, 5, 8, 8, 9, 7], vec![1, 5, 9]), vec![7, 10]);
+    tests.run_test((vec![1, 2, 3], vec![4]), vec![]);
+    tests.run_test((vec![], vec![4]), vec![]);
+}

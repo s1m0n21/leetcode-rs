@@ -20,3 +20,14 @@ pub fn validate_stack_sequences(pushed: Vec<i32>, popped: Vec<i32>) -> bool {
 
     j == popped.len()
 }
+
+#[cfg(test)]
+use crate::utils::test::TestCase;
+
+#[test]
+fn test_solution() {
+    let tests = TestCase::new(|p: (Vec<i32>, Vec<i32>)| validate_stack_sequences(p.0, p.1));
+
+    tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 2, 1]), true);
+    tests.run_test((vec![1, 2, 3, 4, 5], vec![4, 5, 3, 1, 2]), false);
+}

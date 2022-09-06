@@ -18,3 +18,15 @@ pub fn final_prices(prices: Vec<i32>) -> Vec<i32> {
 
     res
 }
+
+#[cfg(test)]
+use crate::utils::test::TestCase;
+
+#[test]
+fn test_solution() {
+    let tests = TestCase::new(final_prices);
+
+    tests.run_test(vec![8, 4, 6, 2, 3], vec![4, 2, 4, 2, 3]);
+    tests.run_test(vec![1, 2, 3, 4, 5], vec![1, 2, 3, 4, 5]);
+    tests.run_test(vec![10, 1, 1, 6], vec![9, 0, 1, 6]);
+}

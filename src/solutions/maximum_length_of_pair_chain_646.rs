@@ -16,3 +16,13 @@ pub fn find_longest_chain(mut pairs: Vec<Vec<i32>>) -> i32 {
 
     max
 }
+
+#[cfg(test)]
+use crate::utils::test::TestCase;
+
+#[test]
+fn test_maximum_length_of_pair_chain_646() {
+    let tests = TestCase::new(find_longest_chain);
+
+    tests.run_test(vec![vec![1, 2], vec![2, 3], vec![3, 4]], 2);
+}

@@ -24,3 +24,16 @@ pub fn num_special(mat: Vec<Vec<i32>>) -> i32 {
 
     special
 }
+
+#[cfg(test)]
+use crate::utils::test::TestCase;
+
+#[test]
+fn test_solution() {
+    let tests = TestCase::new(num_special);
+
+    tests.run_test(vec![vec![1, 0, 0], vec![0, 0, 1], vec![1, 0, 0]], 1);
+    tests.run_test(vec![vec![1, 0, 0], vec![0, 1, 0], vec![0, 0, 1]], 3);
+    tests.run_test(vec![vec![0, 0, 0, 1], vec![1, 0, 0, 0], vec![0, 1, 1, 0], vec![0, 0, 0, 0]], 2);
+    tests.run_test(vec![vec![0, 0, 0, 0, 0], vec![1, 0, 0, 0, 0], vec![0, 1, 0, 0, 0], vec![0, 0, 1, 0, 0], vec![0, 0, 0, 1, 1]], 3);
+}
