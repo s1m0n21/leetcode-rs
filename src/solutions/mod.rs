@@ -9,3 +9,4 @@ pub mod special_positions_in_a_binary_matrix_1582;
 pub mod rearrange_spaces_between_words_1592;
 pub mod special_array_with_x_elements_greater_than_or_equal_x_1608;
 pub mod mean_of_array_after_removing_some_elements_1619;
+pub mod largest_substring_between_two_equal_characters_1624;
